@@ -36,6 +36,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         list_recycler_view.apply {
             layoutManager = LinearLayoutManager(activity)
+            addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
             adapter = ListAdapter(nicCageMovies)
         }
     }
